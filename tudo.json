@@ -1,21 +1,23 @@
-[{
-    "name": "Google2",
-    "tags": ["pesquisaGoogle"],
-    "scenarios": ["Pesquisa Simples2"],
-    "scenarioSteps": [{
-        "scenario": {
-            "name": "Pesquisa Simples2",
-            "steps": ["Given Internet", "When Abre o Google", "Then Pagina carrega.", "When Realizar Pesquisa", "Then Campo preenchido com texto", "When Busca e realizada", "Then Pagina carrega trazendo resultado"]
-        }
-    }]
-}, {
+{
     "name": "Google",
     "tags": ["pesquisaGoogle"],
-    "scenarios": ["Pesquisa Simples"],
-    "scenarioSteps": [{
-        "scenario": {
-            "name": "Pesquisa Simples",
-            "steps": ["Given Internet", "When Abre o Google", "Then Pagina carrega.", "When Realizar Pesquisa", "Then Campo preenchido com texto", "When Busca e realizada", "Then Pagina carrega trazendo resultado"]
-        }
-    }]
-}]
+    "scenarios": ["Pesquisa Simples", "Pesquisa Simples2", "scenario3"],
+    "scenarioSteps": [
+        [{
+            "scenario": {
+                "name": "Pesquisa Simples",
+                "steps": ["Given Internet", "When Abre o Google", "Then Pagina carrega.", "When Realizar Pesquisa", "Then Campo preenchido com texto", "When Busca e realizada", "Then Pagina carrega trazendo resultado"]
+            }
+        }, {
+            "scenario": {
+                "name": "Pesquisa Simples2",
+                "steps": ["Given Internet Pesquisa Simples2", "When Abre o Google Pesquisa Simples2"]
+            }
+        }, {
+            "scenario": {
+                "name": "scenario3",
+                "steps": ["Given Internet scenario3", "When Abre o Google scenario3"]
+            }
+        }]
+    ]
+}
