@@ -10,5 +10,9 @@ Scenario: Pesquisa Simples2
 	When Busca e realizada 
 	Then Pagina carrega trazendo resultado
 
+Scenario: Pesquisa Simples3
+	Given Internet Simples3
+	
+
 
 

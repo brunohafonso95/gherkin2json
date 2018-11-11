@@ -1,4 +1,21 @@
-{
+[{
+    "name": "Google2",
+    "tags": ["pesquisaGoogle"],
+    "scenarios": ["Pesquisa Simples2", "Pesquisa Simples3"],
+    "scenarioSteps": [
+        [{
+            "scenario": {
+                "name": "Pesquisa Simples2",
+                "steps": ["Given Internet", "When Abre o Google", "Then Pagina carrega.", "When Realizar Pesquisa", "Then Campo preenchido com texto", "When Busca e realizada", "Then Pagina carrega trazendo resultado"]
+            }
+        }, {
+            "scenario": {
+                "name": "Pesquisa Simples3",
+                "steps": ["Given Internet Simples3"]
+            }
+        }]
+    ]
+}, {
     "name": "Google",
     "tags": ["pesquisaGoogle"],
     "scenarios": ["Pesquisa Simples", "Pesquisa Simples2", "scenario3"],
@@ -20,4 +37,4 @@
             }
         }]
     ]
-}
+}]

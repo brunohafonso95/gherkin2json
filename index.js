@@ -53,17 +53,20 @@ function getLinesFile(file) {
 function getScenarioSteps(file) {
     const scenarios = getFeatureScenarios(file)
     const lines = getLinesFile(file)
-    if(scenarios.length == 1) {    
+    if (scenarios.length == 1) {
         const init = lines.indexOf(`Scenario: ${scenarios[0]}`)
         const name = scenarios[0]
         let steps = lines.slice(init + 1, lines.length)
         return {
-            scenario: {  name, steps }
+            scenario: {
+                name,
+                steps
+            }
         }
     } else {
         let j = 1;
         let listScenarios = []
-        for(let i = 0; i < scenarios.length; i++) {
+        for (let i = 0; i < scenarios.length; i++) {
             if (j < scenarios.length) {
                 const init = lines.indexOf(`Scenario: ${scenarios[i]}`)
                 const finish = lines.indexOf(`Scenario: ${scenarios[j]}`)
@@ -75,7 +78,7 @@ function getScenarioSteps(file) {
                         steps
                     }
                 })
-            } else if(i == scenarios.length - 1) {
+            } else if (i == scenarios.length - 1) {
                 const init = lines.indexOf(`Scenario: ${scenarios[i]}`)
                 const finish = lines.indexOf(`Scenario: ${scenarios[j]}`)
                 const name = scenarios[i]
@@ -94,45 +97,33 @@ function getScenarioSteps(file) {
     }
 }
 
-let name = getFeatureName('teste.feature')
-let tags = getFeatureTags('teste.feature')
-let scenarios = getFeatureScenarios('teste.feature')
-let scenarioSteps = getScenarioSteps('teste.feature')
+// let name = getFeatureName('teste.feature')
+// let tags = getFeatureTags('teste.feature')
+// let scenarios = getFeatureScenarios('teste.feature')
+// let scenarioSteps = getScenarioSteps('teste.feature')
 
-fs.writeFileSync('./tudo.json', JSON.stringify(
-    {
+// fs.writeFileSync('./tudo.json', JSON.stringify({
+//     name,
+//     tags,
+//     scenarios,
+//     scenarioSteps: [scenarioSteps]
+// }))
+
+let features = []
+
+fs.readdirSync('./features').map(file => {
+    let name = getFeatureName(file)
+    let tags = getFeatureTags(file)
+    let scenarios = getFeatureScenarios(file)
+    let scenarioSteps = getScenarioSteps(file)
+    features.push({
         name,
         tags,
         scenarios,
         scenarioSteps: [scenarioSteps] 
-    }
+    })
+})
+
+fs.writeFileSync('./tudo.json', JSON.stringify(
+    features
 ))
-
-// let features = []
-
-// fs.readdirSync('./features').map(file => {
-//     let name = getFeatureName(file)
-//     let tags = getFeatureTags(file)
-//     let scenarios = getFeatureScenarios(file)
-//     let scenarioSteps = getScenarioSteps(file)
-//     features.push({
-//         name,
-//         tags,
-//         scenarios,
-//         scenarioSteps: [scenarioSteps] 
-//     })
-// })
-
-// fs.writeFileSync('./tudo.json', JSON.stringify(
-//     features
-// ))
-
-
-
-
-
-
-
-
-
-
