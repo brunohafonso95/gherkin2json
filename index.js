@@ -1,4 +1,5 @@
 const fs = require('fs')
+const Shell = require('powershell')
 
 function getFeatureName(file) {
     let featureName;
@@ -116,10 +117,12 @@ fs.readdirSync('./features').map(file => {
     let tags = getFeatureTags(file)
     let scenarios = getFeatureScenarios(file)
     let scenarioSteps = getScenarioSteps(file)
+    let featurePath = `./features/${file}`
     features.push({
         name,
         tags,
         scenarios,
+        featurePath,
         scenarioSteps: [scenarioSteps] 
     })
 })
@@ -127,3 +130,24 @@ fs.readdirSync('./features').map(file => {
 fs.writeFileSync('./tudo.json', JSON.stringify(
     features
 ))
+
+// let ps = new Shell('lighthouse ').
+// ps.on("error", err => {
+//     console.error(err);
+// });
+
+// // Stdout
+// ps.on("output", data => {
+//     console.log(data);
+//     console.log("yeap")
+// });
+
+// // Stderr
+// ps.on("error-output", data => {
+//     console.error(data);
+// });
+
+// // End
+// ps.on("end", code => {
+//     // Do Something on end
+// });
