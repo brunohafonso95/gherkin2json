@@ -1,0 +1,55 @@
+[{
+    "id": 1,
+    "projectName": "javac",
+    "performedTestStatus": "passed",
+    "executionDate": "2018-11-28T21:25:44.371Z",
+    "features": [{
+        "featureName": "Schedule a call",
+        "featureStatus": "passed",
+        "scenarios": [{
+            "scenarioName": "call a schedule",
+            "scenarioStatus": "passed",
+            "steps": [{
+                "stepDefinition": "Before",
+                "stepName": "Before all steps",
+                "stepDuration": 19952981360,
+                "stepStatus": "passed"
+            }, {
+                "stepDefinition": "Given",
+                "stepName": "User lands on Portfolio Recommendation Dashboard after Risk Profile completion.",
+                "stepDuration": 16485210345,
+                "stepStatus": "passed"
+            }, {
+                "stepDefinition": "When",
+                "stepName": "click on Schedule a Call",
+                "stepDuration": 1527481282,
+                "stepStatus": "passed"
+            }, {
+                "stepDefinition": "And",
+                "stepName": "User makes Day & Time selection and enters Name & Email address within Calendly",
+                "stepDuration": 6882276692,
+                "stepStatus": "passed"
+            }, {
+                "stepDefinition": "Then",
+                "stepName": "The event is scheduled, the popup notifies confirmation with a summary of selection.",
+                "stepDuration": 825621055,
+                "stepStatus": "passed"
+            }, {
+                "stepDefinition": "When",
+                "stepName": "Confirmation Email is sent to user",
+                "stepDuration": 1032312242,
+                "stepStatus": "passed"
+            }, {
+                "stepDefinition": "Then",
+                "stepName": "The message contains the date and time details",
+                "stepDuration": 2571569894,
+                "stepStatus": "passed"
+            }, {
+                "stepDefinition": "After",
+                "stepName": "After all steps",
+                "stepDuration": 269952979,
+                "stepStatus": "passed"
+            }]
+        }]
+    }]
+}]

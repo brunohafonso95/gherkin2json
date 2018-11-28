@@ -1,0 +1,119 @@
+[{
+    "line": 1,
+    "elements": [{
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [{
+            "result": {
+                "duration": 297418200,
+                "status": "failed"
+            },
+            "line": 4,
+            "name": "Acessar pagina do google",
+            "match": {
+                "location": "GoogleSteps.acessar_pagina_do_google()"
+            },
+            "keyword": "Given "
+        }, {
+            "result": {
+                "status": "skipped"
+            },
+            "line": 5,
+            "name": "Fazer uma pesquisa",
+            "match": {
+                "location": "GoogleSteps.fazer_uma_pesquisa()"
+            },
+            "keyword": "When "
+        }]
+    }, {
+        "line": 7,
+        "name": "Fazer uma Busca simples",
+        "description": "",
+        "id": "busca-simples-no-google;fazer-uma-busca-simples",
+        "after": [{
+            "result": {
+                "duration": 2208300,
+                "status": "failed"
+            },
+            "match": {
+                "location": "GoogleSteps.finish()"
+            }
+        }],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [{
+            "result": {
+                "status": "skipped"
+            },
+            "line": 9,
+            "name": "Apresenta os resultados da pesquisa",
+            "match": {
+                "location": "GoogleSteps.apresenta_os_resultados_da_pesquisa()"
+            },
+            "keyword": "Then "
+        }]
+    }, {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [{
+            "result": {
+                "duration": 11140000,
+                "status": "failed"
+            },
+            "line": 4,
+            "name": "Acessar pagina do google",
+            "match": {
+                "location": "GoogleSteps.acessar_pagina_do_google()"
+            },
+            "keyword": "Given "
+        }, {
+            "result": {
+                "status": "skipped"
+            },
+            "line": 5,
+            "name": "Fazer uma pesquisa",
+            "match": {
+                "location": "GoogleSteps.fazer_uma_pesquisa()"
+            },
+            "keyword": "When "
+        }]
+    }, {
+        "line": 11,
+        "name": "Erro na Busca simples",
+        "description": "",
+        "id": "busca-simples-no-google;erro-na-busca-simples",
+        "after": [{
+            "result": {
+                "duration": 113600,
+                "status": "failed"
+            },
+            "match": {
+                "location": "GoogleSteps.finish()"
+            }
+        }],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [{
+            "result": {
+                "status": "skipped"
+            },
+            "line": 13,
+            "name": "Apresenta os resultados errados",
+            "match": {
+                "location": "GoogleSteps.apresenta_os_resultados_errados()"
+            },
+            "keyword": "Then "
+        }]
+    }],
+    "name": "Busca simples no google",
+    "description": "",
+    "id": "busca-simples-no-google",
+    "keyword": "Feature",
+    "uri": "Google.feature"
+}]

@@ -1,0 +1,135 @@
+[
+    {
+      "line": 2,
+      "elements": [
+        {
+          "line": 6,
+          "name": "",
+          "description": "",
+          "type": "background",
+          "keyword": "Background",
+          "steps": [
+            {
+              "result": {
+                "duration": 16485210345,
+                "status": "passed"
+              },
+              "line": 7,
+              "name": "User lands on Portfolio Recommendation Dashboard after Risk Profile completion.",
+              "match": {
+                "location": "XpInvestimentsSteps.user_lands_on_Portfolio_Recommendation_Dashboard_after_Risk_Profile_completion()"
+              },
+              "keyword": "Given "
+            }
+          ]
+        },
+        {
+          "before": [
+            {
+              "result": {
+                "duration": 19952981360,
+                "status": "passed"
+              },
+              "match": {
+                "location": "XpInvestimentsSteps.start()"
+              }
+            }
+          ],
+          "line": 9,
+          "name": "",
+          "description": "",
+          "id": "schedule-a-call;",
+          "after": [
+            {
+              "result": {
+                "duration": 269952979,
+                "status": "passed"
+              },
+              "match": {
+                "location": "XpInvestimentsSteps.end()"
+              }
+            }
+          ],
+          "type": "scenario",
+          "keyword": "Scenario",
+          "steps": [
+            {
+              "result": {
+                "duration": 1527481282,
+                "status": "passed"
+              },
+              "line": 10,
+              "name": "click on Schedule a Call",
+              "match": {
+                "location": "XpInvestimentsSteps.click_on_Schedule_a_Call()"
+              },
+              "keyword": "When "
+            },
+            {
+              "result": {
+                "duration": 6882276692,
+                "status": "passed"
+              },
+              "line": 11,
+              "name": "User makes Day \u0026 Time selection and enters Name \u0026 Email address within Calendly",
+              "match": {
+                "location": "XpInvestimentsSteps.user_makes_Day_Time_selection_and_enters_Name_Email_address_within_Calendly()"
+              },
+              "keyword": "And "
+            },
+            {
+              "result": {
+                "duration": 825621055,
+                "status": "passed"
+              },
+              "line": 12,
+              "name": "The event is scheduled, the popup notifies confirmation with a summary of selection.",
+              "match": {
+                "location": "XpInvestimentsSteps.the_event_is_scheduled_the_popup_notifies_confirmation_with_a_summary_of_selection()"
+              },
+              "keyword": "Then "
+            },
+            {
+              "result": {
+                "duration": 1032312242,
+                "status": "passed"
+              },
+              "line": 13,
+              "name": "Confirmation Email is sent to user",
+              "match": {
+                "location": "XpInvestimentsSteps.confirmation_Email_is_sent_to_user()"
+              },
+              "keyword": "When "
+            },
+            {
+              "result": {
+                "duration": 2571569894,
+                "status": "passed"
+              },
+              "line": 14,
+              "name": "The message contains the date and time details",
+              "match": {
+                "location": "XpInvestimentsSteps.the_message_contains_the_date_and_time_details()"
+              },
+              "keyword": "Then "
+            }
+          ]
+        }
+      ],
+      "name": "Schedule a call",
+      "description": "Users with investable amount greater than US$ 300,000 have the facility to schedule call with XP Advisors to complete the account creation process.\r\nCall scheduling feature is offered with the help of Calendly Widget.",
+      "id": "schedule-a-call",
+      "keyword": "Feature",
+      "uri": "E05_S01 - Schedule Call.feature",
+      "tags": [
+        {
+          "line": 1,
+          "name": "@schedule"
+        },
+        {
+          "line": 1,
+          "name": "@validando"
+        }
+      ]
+    }
+  ]

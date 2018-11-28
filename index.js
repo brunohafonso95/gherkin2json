@@ -59,10 +59,8 @@ function getScenarioSteps(file) {
         const name = scenarios[0]
         let steps = lines.slice(init + 1, lines.length)
         return {
-            scenario: {
-                name,
-                steps
-            }
+            name,
+            steps
         }
     } else {
         let j = 1;
@@ -74,10 +72,8 @@ function getScenarioSteps(file) {
                 const name = scenarios[i]
                 let steps = lines.slice(init + 1, finish)
                 listScenarios.push({
-                    scenario: {
-                        name,
-                        steps
-                    }
+                    name,
+                    steps
                 })
             } else if (i == scenarios.length - 1) {
                 const init = lines.indexOf(`Scenario: ${scenarios[i]}`)
@@ -85,10 +81,8 @@ function getScenarioSteps(file) {
                 const name = scenarios[i]
                 let steps = lines.slice(init + 1, lines.length)
                 listScenarios.push({
-                    scenario: {
-                        name,
-                        steps
-                    }
+                    name,
+                    steps
                 })
             }
             j++
@@ -118,12 +112,10 @@ fs.readdirSync('./features').map(file => {
     let scenarios = getFeatureScenarios(file)
     let scenarioSteps = getScenarioSteps(file)
     let featurePath = `./features/${file}`
+    const featureFileName = `${file}`;
     features.push({
         name,
-        tags,
-        scenarios,
-        featurePath,
-        scenarioSteps: [scenarioSteps] 
+        scenarioSteps
     })
 })
 
@@ -131,7 +123,14 @@ fs.writeFileSync('./tudo.json', JSON.stringify(
     features
 ))
 
-// let ps = new Shell('lighthouse ').
+
+let tags = ['apresentacao']
+
+// tags = tags.map(tag => `--tags @${tag}`);
+// console.log(tags.join(' '));
+
+// let ps = new Shell(`rm -r ./novo-archetype`)
+
 // ps.on("error", err => {
 //     console.error(err);
 // });
@@ -139,15 +138,32 @@ fs.writeFileSync('./tudo.json', JSON.stringify(
 // // Stdout
 // ps.on("output", data => {
 //     console.log(data);
-//     console.log("yeap")
+//     console.log('success');
 // });
 
 // // Stderr
 // ps.on("error-output", data => {
 //     console.error(data);
+//     console.log('error');
 // });
 
 // // End
 // ps.on("end", code => {
-//     // Do Something on end
+//     console.log(code);
 // });
+
+// var rmdirRecursiveSync = require('rmdir-recursive').sync;
+ 
+// var dir = './novo-archetype';
+// try {
+//   rmdirRecursiveSync(dir);
+//   console.log(dir + ' removed');
+// } catch (err) {
+//   console.log(dir + ' cant removed with status ' + err);
+// }
+
+
+
+let testResults = JSON.parse(fs.readFileSync('./testResults.json'));
+
+// fs.writeFileSync('./teste2.json', JSON.stringify(JSON.parse(json)));
